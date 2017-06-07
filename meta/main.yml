@@ -1,5 +1,6 @@
 galaxy_info:
   author: Toby Matherly
+  description:
   company: Genesys
 
   # Some suggested licenses:
@@ -15,10 +16,10 @@ galaxy_info:
 
   # platforms is a list of platforms, and each platform has a name and a list of versions.
   #
-   platforms:
-   - name: MacOSx
-     versions:
-     - 10.12
+  platforms:
+    - name: MacOSx
+      versions:
+       - 10.12
 
   galaxy_tags:
     - bastion
