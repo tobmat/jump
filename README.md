@@ -1,4 +1,4 @@
-Role Name
+JUMP
 =========
 
 This is a basic role that has the setup needed to run ansible through a jump / bastion hosts.
@@ -21,11 +21,11 @@ None
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Example assumes running from tests/:
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - ../../tobmat.jump
 
 License
 -------
