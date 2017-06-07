@@ -1,0 +1,26 @@
+Host *
+  ServerAliveInterval 240
+
+### Search replace_with to find all spots you need to update for this to work
+### JUMP / BASTION HOST ###
+# Host     - replace with inventory name of jump/bastion host
+# Hostname - IP address or resolvable DNS name of jump/bastion host
+# User     - user on jump/bastion host that you have ssh access via ssh key 
+Host replace_with_jumphost
+  Hostname replace_with_jumphost_ip_or_name           
+  User replace_with_ssh_user
+  TCPKeepAlive yes
+  ControlMaster auto
+  ControlPath ~/.ssh/ansible-%r@%h:%p
+  ControlPersist 15m
+  ForwardAgent yes
+
+### Servers to access through jump/bastion host ###
+# Host     - replace with inventory name of server
+# Hostname - IP address of server
+# User     - user on server that you have ssh access via ssh key 
+Host replace_with_servername
+  Hostname replace_with_server_ip_address
+  User replace_with_ssh_user
+  ProxyCommand ssh -q cloudjump nc %h 22
+
